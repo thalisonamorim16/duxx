@@ -2,14 +2,15 @@
 
 /* --- CUSTOM VARIABLES --- */
 :root {
-    --bg-dark: #0d0d0d;
+    --bg-dark: #ffffff;
+    --bg-dark-even: #f4f4f4;
     --neon-green: #39FF14;
-    --neon-green-glow: rgba(57, 255, 20, 0.4);
-    --neon-green-dim: rgba(57, 255, 20, 0.1);
-    --text-primary: #FFFFFF;
-    --text-secondary: #AAAAAA;
-    --card-bg: #111111;
-    --card-border: #1e1e1e;
+    --neon-green-glow: rgba(57, 255, 20, 0.3);
+    --neon-green-dim: rgba(57, 255, 20, 0.15);
+    --text-primary: #111111;
+    --text-secondary: #6b7280;
+    --card-bg: #f4f4f4;
+    --card-border: #e5e7eb;
     --font-heading: 'Bebas Neue', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -126,15 +127,16 @@ header {
     z-index: 1000;
     transition: var(--transition-smooth);
     padding: 1.5rem 0;
-    border-bottom: 1px solid transparent;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 header.scrolled {
-    background-color: rgba(13, 13, 13, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     padding: 1rem 0;
-    border-bottom: 1px solid var(--card-border);
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .nav-container {
@@ -231,8 +233,20 @@ header.scrolled {
 
 .btn-nav:hover {
     background-color: transparent;
-    color: var(--neon-green);
-    box-shadow: 0 0 20px var(--neon-green-glow);
+    color: #111111;
+    border-color: #111111;
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.2);
+}
+
+#nav-logo {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0.35rem 0;
+}
+
+#nav-logo span {
+    color: #111111;
+    font-size: 1.5rem;
 }
 
 /* MOBILE NAV TOGGLE */
@@ -482,7 +496,8 @@ section {
 
 /* --- SECTION 2: O PROBLEMA --- */
 #problema {
-    background-color: #0d1f0f;
+    background-color: #111111;
+    color: #ffffff;
 }
 
 .pain-grid {
@@ -528,7 +543,7 @@ section {
 /* --- SECTION 3: O MÉTODO --- */
 .method-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
     margin-bottom: 4rem;
 }
@@ -607,7 +622,7 @@ section {
 
 /* --- SECTION 4: PIRÂMIDE DE PERFORMANCE --- */
 #piramide {
-    background-color: #0d1f0f;
+    background-color: #f4f4f4;
 }
 
 .pyramid-grid {
@@ -765,7 +780,7 @@ section {
 
 /* --- SECTION 6: A CULTURA --- */
 #cultura {
-    background-color: #0d1f0f;
+    background-color: #f4f4f4;
 }
 
 .culture-grid {
@@ -871,8 +886,9 @@ section {
 
 /* --- SECTION 8: CTA FINAL --- */
 #cta-final {
-    background: linear-gradient(180deg, rgba(57, 255, 20, 0.05) 0%, #0d1f0f 100%);
-    border-top: 1px solid var(--neon-green-dim);
+    background-color: #111111;
+    background-image: none;
+    border-top: none;
     padding: 8rem 0;
     text-align: center;
 }
@@ -889,19 +905,19 @@ section {
 }
 
 .cta-final-title span.white {
-    color: var(--text-primary);
+    color: #ffffff;
     display: block;
 }
 
 .cta-final-title span.neon {
-    color: var(--neon-green);
+    color: #39ff14;
     display: block;
     text-shadow: 0 0 25px rgba(57, 255, 20, 0.3);
 }
 
 .cta-final-subtext {
     font-size: 1.2rem;
-    color: var(--text-secondary);
+    color: #6b7280;
     margin-bottom: 3.5rem;
     line-height: 1.6;
 }
@@ -912,17 +928,31 @@ section {
     margin-bottom: 1.5rem;
 }
 
+#final-cta-btn {
+    background-color: #39ff14 !important;
+    color: #111111 !important;
+    font-weight: 700 !important;
+    border: 2px solid #39ff14 !important;
+}
+
+#final-cta-btn:hover {
+    background-color: transparent !important;
+    color: #39ff14 !important;
+    border-color: #39ff14 !important;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.4) !important;
+}
+
 .cta-final-footer-text {
     font-size: 0.85rem;
-    color: #666666;
+    color: #6b7280;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 /* --- SECTION 9: CONTATO --- */
 #contato {
-    background-color: #0d0d0d;
-    border-top: 1px solid var(--card-border);
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
 }
 
 .contact-grid {
@@ -1101,8 +1131,8 @@ textarea.form-control {
 
 /* --- FOOTER --- */
 footer {
-    background-color: #0d1f0f;
-    border-top: 1px solid var(--card-border);
+    background-color: #f4f4f4;
+    border-top: 1px solid #e5e7eb;
     padding: 5rem 0 2.5rem 0;
     position: relative;
     z-index: 10;
@@ -1241,8 +1271,8 @@ footer {
         width: 80%;
         max-width: 320px;
         height: 100vh;
-        background-color: #0a0a0a;
-        border-left: 1px solid var(--card-border);
+        background-color: #ffffff;
+        border-left: 1px solid #e5e7eb;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
@@ -1305,3 +1335,99 @@ footer {
         margin: 4rem auto;
     }
 }
+
+/* ==========================================================================
+   LIGHT MODE CONTEXTUAL OVERRIDES
+   ========================================================================== */
+
+/* Cards in Odd (White) Sections: #f4f4f4 bg with #e5e7eb border */
+#hero .stat-card,
+#metodo .method-card,
+#servicos .service-card,
+#contato .contact-form-container,
+.results-table-container {
+    background-color: #f4f4f4 !important;
+    border-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+/* Cards in Even (Gray) Sections: #ffffff bg with #e5e7eb border */
+#piramide .pyramid-layer,
+#cultura .culture-card {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+/* Form input elements in light mode */
+.form-control {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+.form-control:focus {
+    border-color: var(--neon-green) !important;
+}
+
+/* Results table header and details */
+.results-table th {
+    background-color: #e5e7eb !important;
+    color: #111111 !important;
+}
+
+.results-table td {
+    border-bottom-color: #e5e7eb !important;
+}
+
+.results-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Method Closing Text style below cards */
+.method-closing {
+    text-align: center;
+    margin: 3.5rem 0 2rem 0;
+    width: 100%;
+}
+
+.method-closing p {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Divider visual refresh for light mode */
+.divider {
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent) !important;
+}
+
+/* ==========================================================================
+   SECTION 2 (PROBLEMA) CUSTOM DARK SCHEME OVERRIDES
+   ========================================================================== */
+#problema .section-title {
+    color: #ffffff !important;
+}
+
+#problema .accent-label {
+    color: #39ff14 !important;
+}
+
+#problema .pain-card {
+    background-color: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-left: 4px solid #39ff14 !important;
+    color: #ffffff !important;
+}
+
+#problema .pain-card h3 {
+    color: #ffffff !important;
+}
+
+#problema .pain-card p {
+    color: #9ca3af !important;
+}
+
